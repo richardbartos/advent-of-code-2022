@@ -19,5 +19,9 @@ with open(os.path.join(os.path.dirname(__file__), 'data.txt')) as fh:
     #Add the last elf to the map as the "" is missing on the last line 
     mapElfCalories.append(sum(singleElfCalories))
 
+print("Elf with most calories:")
 print(max(mapElfCalories))
 
+print("Top 3 with most calories:")
+mapElfCalories.sort(reverse=True)
+print(mapElfCalories[0]+mapElfCalories[1]+mapElfCalories[2])
