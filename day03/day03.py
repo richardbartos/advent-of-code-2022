@@ -28,12 +28,11 @@ def split_and_find_duplicates(rucksack):
     'p'
     """
 
-    first_compartment, second_compartment = rucksack[:len(rucksack) // 2], rucksack[len(rucksack) // 2:]
+    first_compartment, second_compartment = [rucksack[:len(rucksack) // 2],
+                                             rucksack[len(rucksack) // 2:]]
     for item in first_compartment:
         if item in second_compartment:
             return item
-            # We're expecting there is always just one shared item and thus braking the loop early
-            break
 
 
 def find_duplicates_in_rucksacks(rucksacks):
